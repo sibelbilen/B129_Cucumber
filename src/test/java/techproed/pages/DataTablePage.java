@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import techproed.utilies.Driver;
 
+import java.util.List;
+
 public class DataTablePage {
     public DataTablePage() {
         PageFactory.initElements(Driver.getDriver(), this);
@@ -34,7 +36,14 @@ public class DataTablePage {
     @FindBy(id = "DTE_Field_salary")
     public WebElement salary;
 
+    @FindBy(xpath = "//button[.='Create']")
+    public WebElement createButton;
+
+    @FindBy(xpath = "//input[@type='search']")
+    public WebElement searchBox;
 
 
+    @FindBy(xpath = "//tbody/tr/td[2]")
+    public List<WebElement> isimSutunu;
 }
 

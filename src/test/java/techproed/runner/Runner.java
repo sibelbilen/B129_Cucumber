@@ -1,8 +1,7 @@
-package techproed.runner;
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
+
 /*
 Runner class; testNG deki .xml file larda belirttiğimiz class'ları,packageları veya methodları nasıl
 çalıştırıyorsak, Cucumber frameworkundede Runner class'ındaki tags parametresi ile belirttiğimiz
@@ -14,7 +13,7 @@ senaryoyu çalıştırabiliriz
 @CucumberOptions(features = "src/test/resources/features",
         glue = {"techproed/stepDefinitions"},//Bu parametre ile kodlarımızı yazdığımız stepDefinition
         //class'ının packege'ını belirtiriz
-        tags = "@GoogleSearch",
+        tags = "@GoogleSearchScenarioOutline",
         dryRun = false
 )
 /*

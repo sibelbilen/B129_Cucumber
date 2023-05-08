@@ -2,12 +2,13 @@ package techproed.stepDefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import techproed.utilies.Driver;
 
 public class DataTableStepDefinitions {
 
     @Given("user is on {string} page")
-    public void user_is_on_page(String string) {
-
+    public void user_is_on_page(String url) {
+        Driver.getDriver().get(url);
     }
     @Given("user clicks on the New button")
     public void user_clicks_on_the_new_button() {

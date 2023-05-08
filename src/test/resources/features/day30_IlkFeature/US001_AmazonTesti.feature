@@ -1,17 +1,15 @@
 Feature: US001_Amazon_Sayfasinda_Urun_Aratma
-
-  #Background:Her Scenario öncesi çalışır
-  Background: kullanici_amazon_sayfasina_gider
+  Scenario: TC01_Amazon_sayfasinda_Urun_Selenium_Aratma
     Given kullanici_amazon_sayfasina_gider
-
-  Scenario: TC01_Amazon_sayfasinda_Selenium_Aratma
-    When arama_kutusunda_Selenium_aratir
-    Then sayfayi_kapatir
+    And arama_kutusunda_Selenium_aratir
+    And sayfayi_kapatir
 
   Scenario: TC02_Amazon_sayfasinda_Java_Aratma
-    When arama_kutusunda_java_aratir
-    Then sayfayi_kapatir
+    Given kullanici_amazon_sayfasina_gider
+    And arama_kutusunda_java_aratir
+    And sayfayi_kapatir
 
-  Scenario: TC03_Amazon_sayfasinda_Sql_Aratma
-    When arama_kutusunda_sql_aratir
-    Then sayfayi_kapatir
+  Scenario: TC03_Amazon_sayfasinda_SQL_Aratma
+    Given kullanici_amazon_sayfasina_gider
+    And arama_kutusunda_sql_aratir
+    And sayfayi_kapatir

@@ -1,3 +1,4 @@
+@DataTable
 Feature: Data_tables
 
   Scenario Outline: TC01_Form_Doldurma
@@ -15,5 +16,11 @@ Feature: Data_tables
     And search for the first name "<firstname>"
     Then verify the name field contains the first name "<firstname>"
     Then close the application
+
     Examples:
-      | firstname | lastname | position | office | extension | start_date | salary |
+      | firstname | lastname | position    | office  | extension | start_date | salary  |
+      | john      | smith    | tester      | NYC     | 2134      | 2023-02-25 | 80000   |
+      | sam       | walton   | businessman | LA      | 5262      | 2021-02-21 | 2000000 |
+      | nancy     | brown    | developer   | Dallas  | 2346      | 2021-02-26 | 850000  |
+      | george    | bush     | politician  | Dallas  | 9931      | 2021-02-24 | 9850000 |
+    | barry     | allen    | unknown     | Central | 2103      | 2021-02-23 | 1000000 |

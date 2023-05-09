@@ -48,6 +48,12 @@ public class MedunnaPage {
     @FindBy(id = "room-price")
     public WebElement roomPrice;
 
+    @FindBy(id = "room-description")
+    public WebElement description;
+
+    @FindBy(id = "save-entity")
+    public WebElement saveButton;
+
 
 
 }

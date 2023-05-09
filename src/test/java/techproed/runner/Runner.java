@@ -13,7 +13,7 @@ senaryoyu çalıştırabiliriz
 @CucumberOptions(features = "src/test/resources/features",
         glue = {"techproed/stepDefinitions"},//Bu parametre ile kodlarımızı yazdığımız stepDefinition
         //class'ının packege'ını belirtiriz
-        tags = "@DataTable",
+        tags = "@MedunnaRoom",
         dryRun = false
 )
 /*

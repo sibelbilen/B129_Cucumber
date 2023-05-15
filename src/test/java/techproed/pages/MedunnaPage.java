@@ -6,54 +6,53 @@ import org.openqa.selenium.support.PageFactory;
 import techproed.utilies.Driver;
 
 public class MedunnaPage {
-   public MedunnaPage(){
-       PageFactory.initElements(Driver.getDriver(),this);
+ public MedunnaPage(){
+  PageFactory.initElements(Driver.getDriver(),this);
+ }
 
+ @FindBy(id = "account-menu")
+ public WebElement kullaniciSimgesi;
 
-   }
-    @FindBy(id = "account-menu")
-    public WebElement kullaniciSimgesi;
+ @FindBy(id = "login-item")
+ public WebElement signInSecenegi;
 
-    @FindBy(id = "login-item")
-    public WebElement signInSecenegi;
-    @FindBy(id = "username")
-    public WebElement usernameKutusu;
+ @FindBy(id = "username")
+ public WebElement usernameKutusu;
 
-    @FindBy(id = "password")
-    public WebElement passwordKutusu;
+ @FindBy(id = "password")
+ public WebElement passwordKutusu;
 
-    @FindBy(id = "rememberMe")
-    public WebElement rememberMeRadioButton;
+ @FindBy(id = "rememberMe")
+ public WebElement rememberMeRadioButton;
 
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement signInButton;
+ @FindBy(xpath = "//button[@type='submit']")
+ public WebElement signInButton;
 
+ @FindBy(id = "entity-menu")
+ public WebElement itemsTitles;
 
+ @FindBy(linkText = "Room")
+ public WebElement roomSecenegi;
 
-    @FindBy(id = "entity-menu")
-    public WebElement itemsTitles;
+ @FindBy(id = "jh-create-entity")
+ public WebElement createANewRoom;
 
-    @FindBy(linkText = "Room")
-    public WebElement roomSecenegi;
+ @FindBy(id = "room-roomNumber")
+ public WebElement roomNumber;
 
-    @FindBy(id = "jh-create-entity")
-    public WebElement createANewRoom;
+ @FindBy(id = "room-roomType")
+ public WebElement roomTypeDropDown;
 
-    @FindBy(id = "room-roomNumber")
-    public WebElement roomNumber;
+ @FindBy(id = "room-price")
+ public WebElement roomPrice;
 
-    @FindBy(id = "room-roomType")
-    public WebElement roomTypeDropDown;
+ @FindBy(id = "room-description")
+ public WebElement description;
 
-    @FindBy(id = "room-price")
-    public WebElement roomPrice;
+ @FindBy(id = "save-entity")
+ public WebElement saveButton;
 
-    @FindBy(id = "room-description")
-    public WebElement description;
-
-    @FindBy(id = "save-entity")
-    public WebElement saveButton;
-
-
+ @FindBy(xpath = "//div[@role='alert']")
+ public WebElement kaydedildiAlerti;
 
 }

@@ -1,5 +1,6 @@
 package techproed.stepDefinitions;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -7,6 +8,8 @@ import org.openqa.selenium.Keys;
 import techproed.pages.GooglePage;
 import techproed.utilies.ConfigReader;
 import techproed.utilies.Driver;
+
+import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 
@@ -30,5 +33,18 @@ public class GoogleStepDefinitions {
 
     }
 
+    @When("kullanici verilen bilgileri aratir")
+    public void kullanici_verilen_bilgileri_aratir(DataTable dataTable) throws InterruptedException {
 
+        List<String> aranacakBilgiler = dataTable.asList();//[Bilgiler, Java, SQL, Lambda, Python]
+
+        for (int i = 1; i < aranacakBilgiler.size(); i++) {
+            Thread.sleep(3000);
+
+            googlePage.aramaKutusu.sendKeys(aranacakBilgiler.get(i) + Keys.ENTER);
+            googlePage.aramaKutusu.clear();
+
+        }
+
+    }
 }

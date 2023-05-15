@@ -23,7 +23,7 @@ Feature: Medunna Oda olusturma
     And sayfayi_kapatir
     Examples:
       | roomNumber | Room Type      | price | description   |
-      | 43564657   | DELUXE         | 10    | Temiz Oda     |
-      | 43564643   | PREMIUM_DELUXE | 11    | manzarali Oda |
-      | 43564681   | SUITE          | 12    | denizli Oda   |
-      | 43564661   | DAYCARE        | 13    | dogali Oda    |
+      | 282649599  | DELUXE         | 10    | Temiz Oda     |
+      | 621299776  | PREMIUM_DELUXE | 11    | Güzel Oda     |
+      | 908079878  | SUITE          | 19    | Manzaralı Oda |
+      | 321294061  | DAYCARE        | 12    | Temiz Oda     |
